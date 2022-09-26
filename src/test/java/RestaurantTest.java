@@ -47,7 +47,12 @@ class RestaurantTest {
         assertEquals(600, priceByItem);
     }
 
-
+    @Test
+    public void item_not_added_to_menu_should_return_zero() {
+        addNewRestaurant();
+        int priceByItem = restaurant.getSelectedItemByPrice();
+        assertEquals(0, priceByItem);
+    }
 
     //<<<<<<<<<<<<<<<<<<<<<<<<<ORDER>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
