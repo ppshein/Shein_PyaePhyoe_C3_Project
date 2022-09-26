@@ -38,6 +38,18 @@ class RestaurantTest {
 
     //<<<<<<<<<<<<<<<<<<<<<<<<<OPEN/CLOSED>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
+    //>>>>>>>>>>>>>>>>>>>>>>>>>>>ORDER<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+    @Test
+    public void item_added_to_menu_should_return_the_price_greater_than_zero() {
+        addNewRestaurant();
+        restaurant.addToMenu("Sizzling brownie",319);
+        int priceByItem = restaurant.getSelectedItemByPrice();
+        assertEquals(600, priceByItem);
+    }
+
+
+
+    //<<<<<<<<<<<<<<<<<<<<<<<<<ORDER>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
     //>>>>>>>>>>>>>>>>>>>>>>>>>>>MENU<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
     @Test

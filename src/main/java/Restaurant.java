@@ -36,6 +36,14 @@ public class Restaurant {
         return null;
     }
 
+    public int getSelectedItemByPrice() {
+        int amount = 0;
+        for(Item item: menu) {
+            amount += item.getPrice();
+        }
+        return amount;
+    }
+
     public void addToMenu(String name, int price) {
         Item newItem = new Item(name,price);
         menu.add(newItem);
